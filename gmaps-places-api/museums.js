@@ -23,6 +23,7 @@ request
     result.body.results.map(function(o, i) {
       if (o.vicinity.includes(process.argv[2])) {
         console.log(o.name + "... Open now: " + isOpenNow(o))
+        console.log(o.geometry.location)
       }
     })
 })
